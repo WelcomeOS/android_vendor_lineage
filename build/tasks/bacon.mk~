@@ -24,7 +24,14 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
 	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
-	@cat vendor/lineage/build/tasks/ascii
-	@echo -e ${CL_CYN}"=================================-Package Completed-================================"${CL_RST}
+	@echo -e ${CL_CYN}""${CL_CYN}
+	@echo -e ${CL_CYN}"	 __      __       .__                              ________    _________"
+	@echo -e ${CL_CYN}" /  \    /  \ ____ |  |   ____  ____   _____   ____ \_____  \  /   _____/"
+	@echo -e ${CL_CYN}" \   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \ /   |   \ \_____  \ "
+ 	@echo -e ${CL_CYN}"  \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___//    |    \/        \"
+  	@echo -e ${CL_CYN}"   \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >_______  /_______  /"
+    @echo -e ${CL_CYN}"        \/       \/          \/            \/     \/        \/        \/ "
+    @echo -e ${CL_CYN}""${CL_CYN}
+    @echo -e ${CL_CYN}"=================================-Package Completed-================================"${CL_RST}
 	@echo "WelcomeOS Version: $(LINEAGE_VERSION)" >&2
 	@echo "WelcomeOS Package Path: $(PRODUCT_OUT)/welcome-$(LINEAGE_VERSION).zip" >&2
