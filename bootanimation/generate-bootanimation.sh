@@ -31,7 +31,7 @@ echo "$IMAGEWIDTH $IMAGEHEIGHT" 7 > "$OUT/bootanimation/desc.txt"
 cat "vendor/lineage/bootanimation/desc.txt" >> "$OUT/bootanimation/desc.txt"
 
 # Create audio.wav
-cp "vendor/lineage/bootanimation/boot.wav" "$OUT/bootanimation/part0/boot.wav"
+cp "vendor/lineage/bootanimation/audio.wav" "$OUT/bootanimation/part0/audio.wav"
 
 # Create bootanimation.zip
 cd "$OUT/bootanimation"
