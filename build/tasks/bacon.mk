@@ -1,5 +1,6 @@
 # Copyright (C) 2017 Unlegacy-Android
 # Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2020 The WelcomeOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,10 +17,21 @@
 # -----------------------------------------------------------------
 # Lineage OTA update package
 
-LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/welcome-$(LINEAGE_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
 	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
+	@echo -e ${CL_CYN}""${CL_CYN}
+	@echo -e ${CL_CYN}"	 __      __       .__                              ________    _________"
+	@echo -e ${CL_CYN}" /  \    /  \ ____ |  |   ____  ____   _____   ____ \_____  \  /   _____/"
+	@echo -e ${CL_CYN}" \   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \ /   |   \ \_____  \ "
+ 	@echo -e ${CL_CYN}"  \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___//    |    \/        \"
+  	@echo -e ${CL_CYN}"   \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >_______  /_______  /"
+    @echo -e ${CL_CYN}"        \/       \/          \/            \/     \/        \/        \/ "
+    @echo -e ${CL_CYN}""${CL_CYN}
+    @echo -e ${CL_CYN}"=================================-Package Completed-================================"${CL_RST}
+	@echo "WelcomeOS Version: $(LINEAGE_VERSION)" >&2
+	@echo "WelcomeOS Package Path: $(PRODUCT_OUT)/welcome-$(LINEAGE_VERSION).zip" >&2
