@@ -24,7 +24,7 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LINEAGE_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(LINEAGE_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LINEAGE_TARGET_PACKAGE).md5sum
 	@echo "Package Complete: $(LINEAGE_TARGET_PACKAGE)" >&2
-	@cat vendor/lineage/build/tasks/ascii
-	@echo -e ${CL_CYN}"=================================-Package Completed-================================"${CL_RST}
+	@cat vendor/lineage/build/tasks/welcome.ascii
+	@echo "==================================================" >&2
 	@echo "WelcomeOS Version: $(LINEAGE_VERSION)" >&2
 	@echo "WelcomeOS Package Path: $(PRODUCT_OUT)/welcome-$(LINEAGE_VERSION).zip" >&2
