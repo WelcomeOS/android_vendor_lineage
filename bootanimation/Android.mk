@@ -16,12 +16,12 @@
 #
 
 ifeq ($(TARGET_SCREEN_WIDTH),)
-    $(warning TARGET_SCREEN_WIDTH is not set, using default value: 1080)
-    TARGET_SCREEN_WIDTH := 1080
+    $(warning TARGET_SCREEN_WIDTH is not set, using default value: 720)
+    TARGET_SCREEN_WIDTH := 720
 endif
 ifeq ($(TARGET_SCREEN_HEIGHT),)
-    $(warning TARGET_SCREEN_HEIGHT is not set, using default value: 1920)
-    TARGET_SCREEN_HEIGHT := 1920
+    $(warning TARGET_SCREEN_HEIGHT is not set, using default value: 1280)
+    TARGET_SCREEN_HEIGHT := 1280
 endif
 
 define build-bootanimation

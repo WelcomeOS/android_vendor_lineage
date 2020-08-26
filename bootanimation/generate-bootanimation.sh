@@ -35,6 +35,9 @@ mogrify -resize $RESOLUTION -colors 250 "$OUT/bootanimation/"*"/"*".png"
 echo "$IMAGESCALEWIDTH $IMAGESCALEHEIGHT" 60 > "$OUT/bootanimation/desc.txt"
 cat "vendor/lineage/bootanimation/desc.txt" >> "$OUT/bootanimation/desc.txt"
 
+# Create audio.wav
+cp "vendor/lineage/bootanimation/boot.wav" "$OUT/bootanimation/boot.wav"
+
 # Create bootanimation.zip
 cd "$OUT/bootanimation"
 
