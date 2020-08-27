@@ -1,7 +1,7 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
-PRODUCT_BRAND ?= LineageOS
+PRODUCT_BRAND ?= WelcomeOS
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -114,6 +114,7 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 # Bootanimation
 PRODUCT_PACKAGES += \
     bootanimation.zip
+    shutdownanimation.zip
 
 # Required Lineage packages
 PRODUCT_PACKAGES += \
