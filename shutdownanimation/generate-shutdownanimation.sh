@@ -13,7 +13,7 @@ for part_cnt in 0 1
 do
     mkdir -p "$OUT/shutdownanimation/part$part_cnt"
 done
-tar xfp "vendor/lineage/bootanimation/shutdownanimation.tar" -C "$OUT/shutdownanimation/"
+tar xfp "vendor/lineage/shutdownanimation/shutdownanimation.tar" -C "$OUT/shutdownanimation/"
 mogrify -resize $RESOLUTION -colors 250 "$OUT/shutdownanimation/"*"/"*".png"
 
 # Create desc.txt
