@@ -313,7 +313,7 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
-ifneq ($(WELCOME_CUSTOM_SERIAL),)
+ifdef WELCOME_CUSTOM_SERIAL
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.welcome.custom.serial=$(WELCOME_CUSTOM_SERIAL)
 endif
