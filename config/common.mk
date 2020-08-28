@@ -113,8 +113,7 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Bootanimation
 PRODUCT_PACKAGES += \
-    bootanimation.zip \
-    shutdownanimation.zip
+    bootanimation.zip
 
 # Required Lineage packages
 PRODUCT_PACKAGES += \
