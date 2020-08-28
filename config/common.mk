@@ -129,8 +129,7 @@ PRODUCT_PACKAGES += \
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
     LineageSettingsProvider \
-    LineageSetupWizard \
-    Updater
+    LineageSetupWizard
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
@@ -313,6 +312,11 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
         endif
     endif
 endif
+endif
+
+ifneq ($(WELCOME_CUSTOM_SERIAL),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.welcome.custom.serial=$(WELCOME_CUSTOM_SERIAL)
 endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
