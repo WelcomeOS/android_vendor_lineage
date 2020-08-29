@@ -9,3 +9,7 @@ RINGTONE_PATH := vendor/lineage/prebuilt/common/media/audio/ringtones
 # Notifications
 PRODUCT_COPY_FILES += \
     $(NOTIFICATION_PATH)/Smoorezify.ogg:system/media/audio/alarms/Smoorezify.ogg \
+
+# Ringtones
+PRODUCT_COPY_FILES += \
+    $(NOTIFICATION_PATH)/HardWork.ogg:system/media/audio/alarms/HardWork.ogg \
