@@ -1,7 +1,6 @@
 # Permissions for lineage sdk services
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/org.lineageos.audio.xml:system/etc/permissions/org.lineageos.audio.xml \
-    vendor/lineage/config/permissions/org.lineageos.livedisplay.xml:system/etc/permissions/org.lineageos.livedisplay.xml \
     vendor/lineage/config/permissions/org.lineageos.performance.xml:system/etc/permissions/org.lineageos.performance.xml \
     vendor/lineage/config/permissions/org.lineageos.profiles.xml:system/etc/permissions/org.lineageos.profiles.xml \
     vendor/lineage/config/permissions/org.lineageos.settings.xml:system/etc/permissions/org.lineageos.settings.xml \
