@@ -1,0 +1,11 @@
+#
+# Welcome Audio Files
+#
+
+ALARM_PATH := vendor/lineage/prebuilt/common/media/audio/alarms
+NOTIFICATION_PATH := vendor/lineage/prebuilt/common/media/audio/notifications
+RINGTONE_PATH := vendor/lineage/prebuilt/common/media/audio/ringtones
+
+# Notifications
+PRODUCT_COPY_FILES += \
+    $(NOTIFICATION_PATH)/Smoorezify.ogg:system/media/audio/alarms/Smoorezify.ogg \
