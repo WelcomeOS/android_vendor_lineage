@@ -12,4 +12,4 @@ PRODUCT_COPY_FILES += \
 
 # Ringtones
 PRODUCT_COPY_FILES += \
-    $(NOTIFICATION_PATH)/HardWork.ogg:system/media/audio/ringtones/Hard_Work.ogg \
+    $(NOTIFICATION_PATH)/Hard_Work.ogg:system/media/audio/ringtones/Hard_Work.ogg \
