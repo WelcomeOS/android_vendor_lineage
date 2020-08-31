@@ -93,8 +93,8 @@ PRODUCT_COPY_FILES += \
 # Include AOSP audio files
 include vendor/lineage/config/aosp_audio.mk
 
-# Include WelcomeOS files
-include vendor/lineage/config/welcome.mk
+# Include WelcomeOS audio files
+include vendor/lineage/config/welcome_audio.mk
 
 ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 # Lineage SDK
