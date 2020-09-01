@@ -315,9 +315,19 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
+WELCOME_VERSION_NAME = nine
+
 ifdef WELCOME_CUSTOM_SERIAL
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.welcome.custom.serial=$(WELCOME_CUSTOM_SERIAL)
+endif
+
+ifdef WELCOME_CUSTOM_BUILD_NUMBER_OVERLAY
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.custom.build.version=$(WELCOME_CUSTOM_BUILD_NUMBER_OVERLAY)
+else
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.custom.build.version=welcome_$(WELCOME_VERSION_NAME)-$(shell date -u +%Y%m%d)
 endif
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
