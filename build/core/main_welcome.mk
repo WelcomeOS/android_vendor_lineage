@@ -1,3 +1,7 @@
+WELCOME1 = Welcome
+WELCOME2 = WelcomeOS
+WELCOME3 = Welcome OS
+
 WELCOME_VERSION_NAME = nine
 
 ifeq ($(WELCOME_HAHA),true)
