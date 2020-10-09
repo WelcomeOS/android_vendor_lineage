@@ -1,11 +1,11 @@
 WELCOME_VERSION_NAME = nine
 
 ifeq ($(WELCOME_HAHA),true)
-ADDITIONAL_BUILD_PROPERTIES += \
-    ro.welcome.custom.serial=0123456ABCDEF \
-    ro.custom.build.version=WELCOME_TO_HELL \
-    ro.welcome.haha=true
-else
+    WELCOME_CUSTOM_SERIAL:=0123456ABCDEF
+    WELCOME_CUSTOM_BUILD_NUMBER_OVERLAY=WELCOME_TO_HELL 
+    ADDITIONAL_BUILD_PROPERTIES += ro.welcome.haha=true
+endif
+
 ifneq ($(WELCOME_CUSTOM_SERIAL),)
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.welcome.custom.serial=$(WELCOME_CUSTOM_SERIAL)
@@ -18,4 +18,4 @@ else
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.custom.build.version=$(WELCOME_CUSTOM_BUILD_NUMBER_OVERLAY)
 endif
-endif
+
