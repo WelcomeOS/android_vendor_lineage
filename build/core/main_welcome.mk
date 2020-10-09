@@ -25,4 +25,5 @@ ADDITIONAL_BUILD_PROPERTIES += \
 endif
 
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.welcome.version.name=$(WELCOME_VERSION_NAME)
+    ro.welcome.version.name=$(WELCOME_VERSION_NAME) \
+    ro.welcome.version.codemame=$(WHALECUM)
