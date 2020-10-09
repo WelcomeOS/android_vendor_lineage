@@ -1,6 +1,7 @@
 WELCOME1 = Welcome
 WELCOME2 = WelcomeOS
 WELCOME3 = Welcome OS
+WHALECUM = Whalecum
 
 WELCOME_VERSION_NAME = nine
 
