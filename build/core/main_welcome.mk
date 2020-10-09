@@ -19,3 +19,5 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.custom.build.version=$(WELCOME_CUSTOM_BUILD_NUMBER_OVERLAY)
 endif
 
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.welcome.version.name=$(WELCOME_VERSION_NAME)
